@@ -3,24 +3,34 @@
 ///DEPENDECIES
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("methodOverride")
+var methodOverride = require("method-override");
+var path = require("path");
 
 
 //// Creating Server
 var app = express();
-var port = process.env.PORT || 8080;
+var PORT = process.env.PORT || 4000;
+
+app.use(express.static("public"));
 
 ////Body Parser Code
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(bodyParser.urlencoded({ extended: false}));
+
+
+app.use(methodOverride("_method"));
+
+/////HandleBars
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 ///ROUTER
-require("./controllers/burgers_controller")(app);
+var routes = require("./controllers/burgers_controller.js");
 
 
+app.use("/", routes);
 ////Listener
 
 

@@ -1,0 +1,66 @@
+body{
+	background-color: #ed9b40;
+	box-sizing: border-box;
+}
+
+header{
+	text-align: center;
+}
+
+h1{
+	font-size: 40px;
+	padding: 20px;
+}
+#burgerPic{
+	width: 10%;
+	height: 10%;
+}
+
+form{
+	text-align: center;
+	padding-top: 20px; 
+
+}
+
+#devourBtn{
+	
+	text-align: center;
+	margin: 10px;
+}
+
+textarea{
+
+}
+
+#submitBtn{
+	margin: 10px;
+
+}
+
+#fullDiv{
+	background-color: #ffffff;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	left: 200px;
+	bottom: 150px;
+
+
+}
+
+#ateDiv{
+	background-color: #ffffff;
+	width: 100px;
+	height: 100px;
+	display: inline;
+	float: right;
+	position: relative;
+	right: 200px;
+	bottom: 250px;
+}
+
+
+
+
+	
+
