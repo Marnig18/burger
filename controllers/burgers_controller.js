@@ -16,7 +16,7 @@ router.get("/index", function(req, res){
 
 router.post("/index", function(req, res){
 	burger.insertOne(["burger_name", "devoured"], [req.body.name, false], function (){
-		res.redirect("/");
+		res.redirect("/index");
 	});
 });
 
@@ -28,7 +28,7 @@ router.put("/index/:id", function(req, res){
 	burger.updateOne({
 		devoured: true
 	}, condition, function(){
-		res.redirect("/")
+		res.redirect("/index")
 	
 	});
 });
