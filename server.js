@@ -30,7 +30,7 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 
-app.use("/index", routes);
+app.use("/", routes);
 ////Listener
 
 
