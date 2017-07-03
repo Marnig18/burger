@@ -2,7 +2,7 @@
   <img src="assets/img/test.png" alt="burger" class="burgerPic">
   <h1 class="header">Eat-Da-Burger!</h2>
 </header>
-<form action="/" method="POST" class="addForm">
+<form action="/index" method="POST" class="addForm">
   <button type="submit" class="devourBtn">Submit</button>
   <br>
   <textarea name="name" class="textInput" row="4" col="50"></textarea>
@@ -16,7 +16,7 @@
     {{#unless this.devoured}}
     <li>
       {{this.id}}. {{this.burger_name}}
-      <form action="/{{this.id}}?_method=PUT" method="POST">
+      <form action="/index/{{this.id}}?_method=PUT" method="POST">
         <button type="submit" id="devourBtn">Devour It!</button>
       </form>
     </li>
