@@ -3,18 +3,40 @@ body{
 	box-sizing: border-box;
 }
 
-header{
+
+
+img{
+	width: 200px;
+	height: 200px;
 	text-align: center;
+	margin-left: 80px;
 }
 
 h1{
-	font-size: 40px;
-	padding: 20px;
+	font-weight: 700;
+	font-family: 'Chivo', sans-serif;
+	font-style: italic;
+	font-size: 48px;
+	text-align: center;
+	margin-bottom: 20px;
 }
-#burgerPic{
-	width: 10%;
-	height: 10%;
+
+p{
+	font-family: 'Chivo', sans-serif;
+	
+
 }
+
+li{
+	background-color: #E84855;
+	margin: 10px;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 20px;
+	color: #540d6e
+
+}
+
 
 form{
 	text-align: center;
@@ -25,15 +47,24 @@ form{
 #devourBtn{
 	
 	text-align: center;
-	margin: 10px;
+	margin-bottom: 10px;
+	padding: 2px 12px 0 12px;
+	background-color: #540D6e;
+	color: white;
+	border: none;
+	
+	
+	
 }
 
-textarea{
 
-}
 
 #submitBtn{
 	margin: 10px;
+	padding: 2px 12px;
+	background-color: #540D6e;
+	color: white;
+	border: none;
 
 }
 

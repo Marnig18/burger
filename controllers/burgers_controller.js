@@ -14,7 +14,7 @@ router.get("/", function(req, res){
 	});
 });
 
-router.post("/index", function(req, res){
+router.post("/", function(req, res){
 	burger.insertOne(["burger_name", "devoured"], [req.body.name, false], function (){
 		res.redirect("/");
 	});
