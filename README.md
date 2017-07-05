@@ -1,4 +1,2 @@
-# burger
-
-node-modules/
-ds_Store
+node_modules
+.DS_Store
