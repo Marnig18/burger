@@ -4,6 +4,8 @@ var router = express.Router();
 
 var burger = require("../models/burger.js");
 
+
+///ROUTE TO POST INFORMATION FROM THE DATABASE
 router.get("/", function(req, res){
 	burger.selectAll(function(data){
 		var hbsObject = {
@@ -14,12 +16,14 @@ router.get("/", function(req, res){
 	});
 });
 
+////ROUTE TO ADD NEW BURGER
 router.post("/", function(req, res){
 	burger.insertOne(["burger_name", "devoured"], [req.body.name, false], function (){
 		res.redirect("/");
 	});
 });
 
+////ROUTE TO DEVOUR A BURGER
 router.put("/:id", function(req, res){
 	var condition = "id = " + req.params.id;
 

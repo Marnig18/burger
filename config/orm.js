@@ -2,7 +2,7 @@ var connection = require("../config/connection.js");
 
 
 
-
+////Function to insert question marks in place of values
 function printQuestionMarks(num){
 	var arr = [];
 
@@ -12,6 +12,8 @@ function printQuestionMarks(num){
 	return arr.toString();
 }
 
+
+///Funtion to convert object to sql snytax
 function objToSql(ob){
 	var arr = [];
 
